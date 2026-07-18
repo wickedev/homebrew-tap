@@ -5,21 +5,21 @@
 class Devhost < Formula
   desc "Per-directory port virtualization for dev servers"
   homepage "https://github.com/wickedev/devhost"
-  version "0.8.0"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wickedev/devhost/releases/download/v0.8.0/devhost_darwin_amd64.tar.gz"
-      sha256 "2b0d2c322b507fe1ff0f3dfed6e7d4d2ce9bc32de230a8b24a6f098f7f68620a"
+      url "https://github.com/wickedev/devhost/releases/download/v0.9.0/devhost_darwin_amd64.tar.gz"
+      sha256 "2d2be3c4f334d372237dd7aee65bd50b16d7705d6beaf1637c69de63fd6b91b8"
 
       define_method(:install) do
         bin.install "devhost"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wickedev/devhost/releases/download/v0.8.0/devhost_darwin_arm64.tar.gz"
-      sha256 "2b578428237e8f6bf986f5d36998eb15d58e94e53a2cc75f352bc306a144ea80"
+      url "https://github.com/wickedev/devhost/releases/download/v0.9.0/devhost_darwin_arm64.tar.gz"
+      sha256 "9420e0026dedc36f5bdc447d97ae9d9999674b41e84e36a1316297e29b7593e8"
 
       define_method(:install) do
         bin.install "devhost"
@@ -29,15 +29,15 @@ class Devhost < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wickedev/devhost/releases/download/v0.8.0/devhost_linux_amd64.tar.gz"
-      sha256 "81524765887cc7791488f01ed4897a0a06308b63d1413b7523472530694ac2a7"
+      url "https://github.com/wickedev/devhost/releases/download/v0.9.0/devhost_linux_amd64.tar.gz"
+      sha256 "08fa86e694b729bff8c1fb9567a59880f6c2e24a7842190e3be058a22bbacf09"
       define_method(:install) do
         bin.install "devhost"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wickedev/devhost/releases/download/v0.8.0/devhost_linux_arm64.tar.gz"
-      sha256 "1ce6b0faadcd9dad0c59d83a77ec29733b232596c470632fa9301869aa7f50c3"
+      url "https://github.com/wickedev/devhost/releases/download/v0.9.0/devhost_linux_arm64.tar.gz"
+      sha256 "3e3b97d7b046026f3a6b2424660113fcb4d85838b8c0a953dfaa06f6ae8b2c30"
       define_method(:install) do
         bin.install "devhost"
       end
